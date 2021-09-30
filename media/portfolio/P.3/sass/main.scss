@@ -1,0 +1,160 @@
+@import 'variables';
+@import 'utils';
+@import 'pages';
+@import 'layouts';
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+.logo h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+    margin: 14px 0 23px 0;
+}
+
+h1 {
+    font-family: "Shrikhand", cursive;
+    font-weight: weight(regular);
+
+}
+
+h2 {
+    font-weight: weight(medium);
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-weight: weight(regular);
+}
+
+h4 {
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+        .logo-btn {
+            height: 73px;
+            background: linear-gradient(180deg, #CECECE,#f3f0f0);
+            padding-left: 100px;
+            @include flexCenter;
+        }
+}
+
+main {
+    height: auto;
+    width: 100%;
+}
+
+.nav, .card {
+    padding: 5px 30px 100px 30px;
+}
+
+.home {
+    text-align: center;
+    padding: 2rem 0 50px 0px;
+    margin-bottom: 56px;
+    background: $card-color;
+        .btn {
+            width: 40vh;
+            height: 22px;
+            @include hoverButton;
+            @include homeButton;
+        }
+}
+
+.order {
+    @include flexCenter;
+    margin-top: 15px;
+    padding-bottom: 95px;
+        .btn {
+            width: 11em;
+            height: 1em;
+            @include hoverButton;
+            @include flexCenter;
+            @include homeButton;
+        }
+}
+
+
+/* Page Annexe */
+
+.fa-arrow-left:before {
+    position: absolute;
+    left: 1em;
+    top: 47px;
+    font-size: 25px;
+}
+
+.menu_card {
+    @include flexBetween;
+    flex-direction: column;
+    margin-top: -12em;
+    border-radius: 65px 65px;
+    content-visibility: auto;
+    background: $card-color;
+        .title_card {
+            margin-top: 30px;
+            @include flexNormal;
+        }
+}
+
+i.far.fa-heart.heart {
+    font-size: 36px;
+}
+
+.entrances_card {
+    margin-left: 19px;
+        h2 {
+            font-weight: 300;
+            border-bottom: 3px solid #94E1CE;
+            max-inline-size: 60px;
+            margin: 100px 0 0 -10px;
+        }
+}
+
+li.bloc_card {
+    display: inline-flex;
+    width: 99%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 23px;
+    margin-left: -4.5em;
+    margin-right: 20em;
+    background-color: $root-color;
+        p {
+            margin-top: -16px;
+            font-weight: weight(regular);
+            font-size: 13px;
+        }
+        span {
+            position: fixed;
+            right: 9em;
+            font-weight: weight(medium);
+            &:hover {
+                background: $tertiary-color;
+                border-radius: 0 25px 25px 0;
+                padding: 65px 59px 30px 34px;
+                margin: -66px -31px 0 0;
+                }
+        }
+}
+
+.index {
+    background: $card-color;
+}

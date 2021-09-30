@@ -1,0 +1,118 @@
+input {
+    border: none;
+    background: inherit;
+    font-size: 19px;
+    margin-left: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+::placeholder {
+    color:black;
+}
+
+p.card_picture-one--city {
+    font-size: 17px;
+    margin-left: 30px;
+    font-weight: weight(regular);
+}
+
+li {
+    height: 87px;
+    border-radius: 25px;
+    background: $card-color;
+    margin: 25px 0px 20px -40px;
+    box-shadow: 5px 5px 5px #dedede;
+    cursor: pointer;
+    @include flexCenter;
+    
+    &:hover {
+        background: $card-hover;
+    }
+}
+
+.card {
+    padding-top: 3rem;
+    font-weight: weight(regular);
+    cursor: pointer;
+    align-self: flex-start;
+        .card_picture-one {
+            @include placeCard;
+            background: url(../img/photo/img1.jpg) center;
+            background-size: cover;
+        }
+        .card_picture-info {
+            @include placeInfo;
+        }
+}
+
+.card_picture-two {
+    @include placeCard;
+    background: url(../img/photo/img2.jpg) center;
+    background-size: cover;
+        .card_picture-info {
+            @include placeInfo;
+        }
+}
+
+.card_picture-three {
+    @include placeCard;
+    background: url(../img/photo/img3.jpg) center;
+    background-size: cover;
+        .card_picture-info {
+            @include placeInfo;
+        }
+}
+
+.card_picture-four {
+    @include placeCard;
+    background: url(../img/photo/img4.jpg) center;
+    background-size: cover;
+        .card_picture-info {
+            @include placeInfo;
+        }
+}
+
+.card_picture-one {
+    background: url(../img/photo/img1.jpg) center;
+    @include placeCard;
+    @include cardPicture;
+
+}
+.card_picture-two {
+    background: url(../img/photo/img2.jpg) center;
+    @include cardPicture;
+    @include placeCard;
+}
+.card_picture-three {
+    background: url(../img/photo/img3.jpg) center;
+    @include cardPicture;
+    @include placeCard;
+}
+.card_picture-four {
+    background: url(../img/photo/img4.jpg) center;
+    @include cardPicture;
+    @include placeCard;
+}
+.card_border {
+    border: solid transparent;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    background: $root-color;
+}
+
+.menu-nav__number {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 11px;
+    background: $primary-color;
+    text-align-last: center;
+    border-radius: inherit;
+    color: $root-color;
+}
+
+.menu-nav__icons {
+    position: relative;
+    right: 35px;
+}

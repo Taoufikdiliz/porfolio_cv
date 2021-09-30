@@ -1,0 +1,29 @@
+i.far.fa-heart:hover {
+    color: $heart-color;
+}
+
+footer {
+    background: $foot-color;
+    color: $root-color;
+    padding: 10px 0 46px 30px;
+        h1 {
+            font-weight: weight(lighter);
+            font-family: "Shrikhand", cursive;
+            font-size: 27px;
+        }
+        a {
+            color: white;
+        }
+}
+
+.fa-utensils:before {
+    margin-right: 16px;
+}
+
+.fa-hands-helping:before {
+    margin-right: 9px;
+}
+
+.partner, .mail {
+    margin: 10px 0 8px 0px;
+}
